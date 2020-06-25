@@ -16,30 +16,18 @@ struct Provider: IntentTimelineProvider {
     }
 
     public func timeline(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
-        }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let refreshDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
+        let entry = SimpleEntry(date: currentDate, configuration: configuration)
+        let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
         completion(timeline)
     }
 }
 
-enum WidgetKind {
-    case placeHolder
-    case payTools
-    case oneWord
-}
+
 
 struct SimpleEntry: TimelineEntry {
     public let date: Date
-    public let kind: WidgetKind = WidgetKind.placeHolder
     public let configuration: ConfigurationIntent
 }
 
@@ -53,22 +41,24 @@ struct PlaceholderView : View {
 struct smallWidget : View {
     //这里写小型部件
     var entry: Provider.Entry
+    var rows: [GridItem] =
+            Array(repeating: .init(.fixed(20)), count: 2)
     var body: some View {
-        Text("I'm small widget")
+        IconWidgetItem()
     }
 }
 struct mediumWidget : View {
     //这里写中型部件
     var entry: Provider.Entry
     var body: some View {
-        Text("I'm medium widget")
+        IconWidgetItem()
     }
 }
 struct largeWidget : View {
     //这里写大型部件
     var entry: Provider.Entry
     var body: some View {
-        Text("I'm large widget")
+        IconWidgetItem()
     }
 }
 struct DataNotAvailable : View {
@@ -105,3 +95,19 @@ struct MainWidget: Widget {
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }
+
+struct IconWidgetItem:View {
+    var icon:String = "qrcode.viewfinder"
+    var title:String = "支付宝扫码"
+    var body: some View {
+        VStack {
+            Image(systemName: icon)
+                .resizable()
+                .frame(width: 80, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            Text(title)
+                .font(.title)
+                .fontWeight(.bold)
+        }
+    }
+}
+
