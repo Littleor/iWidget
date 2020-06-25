@@ -45,6 +45,7 @@
 		31170D2324A4494900557117 /* iWidgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iWidgetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31170D2724A4494900557117 /* iWidgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iWidgetUITests.swift; sourceTree = "<group>"; };
 		31170D2924A4494900557117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31170D3524A44A1700557117 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 		31170CFE24A4494700557117 = {
 			isa = PBXGroup;
 			children = (
+				31170D3524A44A1700557117 /* README.md */,
 				31170D0924A4494700557117 /* iWidget */,
 				31170D1B24A4494900557117 /* iWidgetTests */,
 				31170D2624A4494900557117 /* iWidgetUITests */,
