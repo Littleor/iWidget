@@ -47,7 +47,7 @@ struct PayToolsWidget: Widget {
         }
         .configurationDisplayName("支付助手")
         .description("快捷启动扫一扫和支付码")
-        .supportedFamilies([.systemSmall, .systemMedium])
+        .supportedFamilies([.systemMedium])
         
     }
 }

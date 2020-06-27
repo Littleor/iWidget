@@ -26,12 +26,13 @@ struct PayToolsSmallView: View {
 }
 
 struct PayToolsMediumView: View {
-    
     var body: some View {
         HStack(spacing: 3.0) {
             IconWidgetItem(icon:"qrcode",bottomIcon: "alipay",size: 70)
             IconWidgetItem(icon: "pay",bottomIcon: "alipay",size: 70,url: "alipay://platformapi/startapp?appId=20000056")
+                .padding([.top, .leading, .bottom])
             IconWidgetItem(icon: "qrcode",bottomIcon: "wechat",size: 70, url: "weixin://scanqrcode")
+                .padding(.all)
             IconWidgetItem(icon: "pay",bottomIcon: "wechat",size: 70, url: "weixin://")
         }
     }
