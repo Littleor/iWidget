@@ -11,23 +11,26 @@ import Intents
 
 struct Provider: IntentTimelineProvider {
     public func snapshot(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
+        let entry = SimpleEntry(date: Date(), data: WidgetData(kind: .payTools))
         completion(entry)
     }
     
     public func timeline(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         let currentDate = Date()
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
-        let entry = SimpleEntry(date: currentDate)
+        let entry = SimpleEntry(date: currentDate, data: WidgetData(kind: configuration.kind))
         let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
         completion(timeline)
     }
 }
 
-
+struct WidgetData {
+    public let kind:WidgetKind
+}
 
 struct SimpleEntry: TimelineEntry {
     public let date: Date
+    public let data: WidgetData
 }
 
 struct PlaceholderView : View {
@@ -41,14 +44,22 @@ struct MainWidgetEntryView : View {
     //这里是Widget的类型判断
     @Environment(\.widgetFamily) var family: WidgetFamily
     var entry: Provider.Entry
+    
     @ViewBuilder
     var body: some View {
-        switch family {
-        case .systemSmall: PayToolsSmallView()
-        case .systemMedium: PayToolsMediumView()
-        case .systemLarge: PayToolsMediumView()
-        default: PayToolsMediumView()
+        switch entry.data.kind {
+        case .payTools:
+            switch family {
+                case .systemSmall: PayToolsSmallView()
+                case .systemMedium: PayToolsMediumView()
+                default: PayToolsMediumView()
+            }
+        case .oneWord:
+            OneWordView()
+        default:
+            OneWordView()
         }
+        
     }
 }
 
@@ -61,7 +72,7 @@ struct MainWidget: Widget {
         }
         .configurationDisplayName("iWidget")
         .description("一款Widget百宝箱!")
-        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
+        .supportedFamilies([.systemSmall, .systemMedium])
         
     }
 }
@@ -70,7 +81,7 @@ struct MainWidget: Widget {
 
 struct MainWidget_Previews: PreviewProvider {
     static var previews: some View {
-        MainWidgetEntryView(entry: SimpleEntry(date: Date()))
+        MainWidgetEntryView(entry: SimpleEntry(date: Date(), data: WidgetData(kind: .payTools)))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

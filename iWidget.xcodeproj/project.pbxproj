@@ -22,6 +22,8 @@
 		31170D4B24A44BCF00557117 /* MainWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 31170D3A24A44BCD00557117 /* MainWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3119253424A740C300D06549 /* PayToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119253324A740C300D06549 /* PayToolsView.swift */; };
 		3119253524A740C300D06549 /* PayToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119253324A740C300D06549 /* PayToolsView.swift */; };
+		3119253A24A74AF000D06549 /* OneWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119253924A74AF000D06549 /* OneWordView.swift */; };
+		3119253B24A74AF000D06549 /* OneWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119253924A74AF000D06549 /* OneWordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,7 @@
 		31170D4424A44BCF00557117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31170D4624A44BCF00557117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3119253324A740C300D06549 /* PayToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayToolsView.swift; sourceTree = "<group>"; };
+		3119253924A74AF000D06549 /* OneWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				3119253324A740C300D06549 /* PayToolsView.swift */,
+				3119253924A74AF000D06549 /* OneWordView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -380,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31170D4824A44BCF00557117 /* MainWidget.intentdefinition in Sources */,
+				3119253A24A74AF000D06549 /* OneWordView.swift in Sources */,
 				31170D0D24A4494700557117 /* ContentView.swift in Sources */,
 				31170D0B24A4494700557117 /* iWidgetApp.swift in Sources */,
 				3119253424A740C300D06549 /* PayToolsView.swift in Sources */,
@@ -407,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3119253524A740C300D06549 /* PayToolsView.swift in Sources */,
+				3119253B24A74AF000D06549 /* OneWordView.swift in Sources */,
 				31170D4224A44BCD00557117 /* MainWidget.swift in Sources */,
 				31170D4724A44BCF00557117 /* MainWidget.intentdefinition in Sources */,
 			);
