@@ -37,51 +37,6 @@ struct PlaceholderView : View {
     }
 }
 
-struct mediumWidget : View {
-    //这里写中型部件
-    var entry: Provider.Entry
-    var body: some View {
-        HStack(spacing: 3.0) {
-                IconWidgetItem(icon:"qrcode",bottomIcon: "alipay",size: 70)
-                IconWidgetItem(icon: "pay",bottomIcon: "alipay",size: 70,url: "alipay://platformapi/startapp?appId=20000056")
-            IconWidgetItem(icon: "qrcode",bottomIcon: "wechat",size: 70, url: "weixin://scanqrcode")
-            IconWidgetItem(icon: "pay",bottomIcon: "wechat",size: 70, url: "weixin://")
-        }
-    }
-}
-
-struct smallWidget : View {
-    //这里写小型部件
-    var entry: Provider.Entry
-    var body: some View {
-        VStack {
-            HStack {
-                IconWidgetItem(icon:"qrcode",bottomIcon: "alipay")
-                IconWidgetItem(icon: "pay",bottomIcon: "alipay",url: "alipay://platformapi/startapp?appId=20000056")
-            }
-            .padding([.top, .leading, .trailing])
-            HStack{
-                IconWidgetItem(icon: "qrcode",bottomIcon: "wechat",url: "weixin://scanqrcode")
-                IconWidgetItem(icon: "pay",bottomIcon: "wechat",url: "weixin://")
-            }
-            .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing]/*@END_MENU_TOKEN@*/)
-        }
-    }
-}
-struct largeWidget : View {
-    //这里写大型部件
-    var entry: Provider.Entry
-    var body: some View {
-        IconWidgetItem()
-    }
-}
-struct DataNotAvailable : View {
-    //这里写Error的时候的部件
-    var body: some View {
-        Text("Data is not available,Please Refresh it.")
-    }
-}
-
 struct MainWidgetEntryView : View {
     //这里是Widget的类型判断
     @Environment(\.widgetFamily) var family: WidgetFamily
@@ -89,10 +44,10 @@ struct MainWidgetEntryView : View {
     @ViewBuilder
     var body: some View {
         switch family {
-        case .systemSmall: smallWidget(entry:entry)
-        case .systemMedium: mediumWidget(entry:entry)
-        case .systemLarge: largeWidget(entry:entry)
-        default: DataNotAvailable()
+        case .systemSmall: PayToolsSmallView()
+        case .systemMedium: PayToolsMediumView()
+        case .systemLarge: PayToolsMediumView()
+        default: PayToolsMediumView()
         }
     }
 }
@@ -111,45 +66,6 @@ struct MainWidget: Widget {
     }
 }
 
-struct IconWidgetItem:View {
-    var icon:String = "qrcode"
-    var bottomIcon:String = "alipay"
-    var size: CGFloat = 60
-    var url: String  = "alipayqr://platformapi/startapp?saId=10000007"
-    var body: some View {
-        Link(destination: URL(string: "https://baidu.com")!) {
-            ZStack {
-                ZStack {
-                    Image(icon)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                }
-                .frame(width: size, height: size, alignment: .center)
-                .zIndex(1)
-                HStack() {
-                    Spacer()
-                    VStack {
-                        Spacer()
-                        HStack {
-                            Image(bottomIcon)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .opacity(1)
-                            
-                        }
-                        .frame(width: size/3, height: size/3, alignment: .center)
-                        .background(Color.white)
-                        .cornerRadius(size/6)
-                        .shadow(radius: 1)
-                    }
-                    
-                }
-                .zIndex(2)
-                
-            }.frame(width: size, height: size, alignment: .center)
-        }
-    }
-}
 
 
 struct MainWidget_Previews: PreviewProvider {
