@@ -15,7 +15,6 @@
 		31170D2824A4494900557117 /* iWidgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31170D2724A4494900557117 /* iWidgetUITests.swift */; };
 		31170D3D24A44BCD00557117 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31170D3C24A44BCD00557117 /* WidgetKit.framework */; };
 		31170D3F24A44BCD00557117 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31170D3E24A44BCD00557117 /* SwiftUI.framework */; };
-		31170D4224A44BCD00557117 /* MainWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31170D4124A44BCD00557117 /* MainWidget.swift */; };
 		31170D4524A44BCF00557117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31170D4424A44BCF00557117 /* Assets.xcassets */; };
 		31170D4724A44BCF00557117 /* MainWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31170D4324A44BCD00557117 /* MainWidget.intentdefinition */; };
 		31170D4824A44BCF00557117 /* MainWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31170D4324A44BCD00557117 /* MainWidget.intentdefinition */; };
@@ -24,6 +23,11 @@
 		3119253524A740C300D06549 /* PayToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119253324A740C300D06549 /* PayToolsView.swift */; };
 		3119253A24A74AF000D06549 /* OneWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119253924A74AF000D06549 /* OneWordView.swift */; };
 		3119253B24A74AF000D06549 /* OneWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119253924A74AF000D06549 /* OneWordView.swift */; };
+		3119253E24A758BF00D06549 /* oneWordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119253D24A758BF00D06549 /* oneWordData.swift */; };
+		3119253F24A758BF00D06549 /* oneWordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119253D24A758BF00D06549 /* oneWordData.swift */; };
+		3119254724A75E0400D06549 /* OneWordWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119254024A75A2900D06549 /* OneWordWidget.swift */; };
+		3119254824A75E0700D06549 /* PayTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119254424A75A8300D06549 /* PayTools.swift */; };
+		3119254924A75E6000D06549 /* MainWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31170D4124A44BCD00557117 /* MainWidget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,9 @@
 		31170D4624A44BCF00557117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3119253324A740C300D06549 /* PayToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayToolsView.swift; sourceTree = "<group>"; };
 		3119253924A74AF000D06549 /* OneWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWordView.swift; sourceTree = "<group>"; };
+		3119253D24A758BF00D06549 /* oneWordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneWordData.swift; sourceTree = "<group>"; };
+		3119254024A75A2900D06549 /* OneWordWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWordWidget.swift; sourceTree = "<group>"; };
+		3119254424A75A8300D06549 /* PayTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +157,7 @@
 		31170D0924A4494700557117 /* iWidget */ = {
 			isa = PBXGroup;
 			children = (
+				3119253C24A7589600D06549 /* Data */,
 				3119253224A7409C00D06549 /* View */,
 				3119253124A7404F00D06549 /* App */,
 				31170D0E24A4494900557117 /* Assets.xcassets */,
@@ -197,9 +205,10 @@
 		31170D4024A44BCD00557117 /* MainWidget */ = {
 			isa = PBXGroup;
 			children = (
-				31170D4124A44BCD00557117 /* MainWidget.swift */,
-				31170D4324A44BCD00557117 /* MainWidget.intentdefinition */,
+				3119254624A75AD500D06549 /* Intent */,
+				3119254324A75A6200D06549 /* Widget */,
 				31170D4424A44BCF00557117 /* Assets.xcassets */,
+				31170D4124A44BCD00557117 /* MainWidget.swift */,
 				31170D4624A44BCF00557117 /* Info.plist */,
 			);
 			path = MainWidget;
@@ -221,6 +230,31 @@
 				3119253924A74AF000D06549 /* OneWordView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3119253C24A7589600D06549 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3119253D24A758BF00D06549 /* oneWordData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3119254324A75A6200D06549 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				3119254024A75A2900D06549 /* OneWordWidget.swift */,
+				3119254424A75A8300D06549 /* PayTools.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		3119254624A75AD500D06549 /* Intent */ = {
+			isa = PBXGroup;
+			children = (
+				31170D4324A44BCD00557117 /* MainWidget.intentdefinition */,
+			);
+			path = Intent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +421,7 @@
 				3119253A24A74AF000D06549 /* OneWordView.swift in Sources */,
 				31170D0D24A4494700557117 /* ContentView.swift in Sources */,
 				31170D0B24A4494700557117 /* iWidgetApp.swift in Sources */,
+				3119253E24A758BF00D06549 /* oneWordData.swift in Sources */,
 				3119253424A740C300D06549 /* PayToolsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,8 +447,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3119253524A740C300D06549 /* PayToolsView.swift in Sources */,
+				3119254924A75E6000D06549 /* MainWidget.swift in Sources */,
+				3119253F24A758BF00D06549 /* oneWordData.swift in Sources */,
 				3119253B24A74AF000D06549 /* OneWordView.swift in Sources */,
-				31170D4224A44BCD00557117 /* MainWidget.swift in Sources */,
+				3119254824A75E0700D06549 /* PayTools.swift in Sources */,
+				3119254724A75E0400D06549 /* OneWordWidget.swift in Sources */,
 				31170D4724A44BCF00557117 /* MainWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
