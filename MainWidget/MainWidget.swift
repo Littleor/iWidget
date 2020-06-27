@@ -11,14 +11,14 @@ import Intents
 
 struct Provider: IntentTimelineProvider {
     public func snapshot(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+        let entry = SimpleEntry(date: Date())
         completion(entry)
     }
-
+    
     public func timeline(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         let currentDate = Date()
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
-        let entry = SimpleEntry(date: currentDate, configuration: configuration)
+        let entry = SimpleEntry(date: currentDate)
         let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
         completion(timeline)
     }
@@ -28,7 +28,6 @@ struct Provider: IntentTimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     public let date: Date
-    public let configuration: ConfigurationIntent
 }
 
 struct PlaceholderView : View {
@@ -38,20 +37,35 @@ struct PlaceholderView : View {
     }
 }
 
-struct smallWidget : View {
-    //这里写小型部件
-    var entry: Provider.Entry
-    var rows: [GridItem] =
-            Array(repeating: .init(.fixed(20)), count: 2)
-    var body: some View {
-        IconWidgetItem()
-    }
-}
 struct mediumWidget : View {
     //这里写中型部件
     var entry: Provider.Entry
     var body: some View {
-        IconWidgetItem()
+        HStack(spacing: 3.0) {
+                IconWidgetItem(icon:"qrcode",bottomIcon: "alipay",size: 70)
+                IconWidgetItem(icon: "pay",bottomIcon: "alipay",size: 70,url: "alipay://platformapi/startapp?appId=20000056")
+            IconWidgetItem(icon: "qrcode",bottomIcon: "wechat",size: 70, url: "weixin://scanqrcode")
+            IconWidgetItem(icon: "pay",bottomIcon: "wechat",size: 70, url: "weixin://")
+        }
+    }
+}
+
+struct smallWidget : View {
+    //这里写小型部件
+    var entry: Provider.Entry
+    var body: some View {
+        VStack {
+            HStack {
+                IconWidgetItem(icon:"qrcode",bottomIcon: "alipay")
+                IconWidgetItem(icon: "pay",bottomIcon: "alipay",url: "alipay://platformapi/startapp?appId=20000056")
+            }
+            .padding([.top, .leading, .trailing])
+            HStack{
+                IconWidgetItem(icon: "qrcode",bottomIcon: "wechat",url: "weixin://scanqrcode")
+                IconWidgetItem(icon: "pay",bottomIcon: "wechat",url: "weixin://")
+            }
+            .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing]/*@END_MENU_TOKEN@*/)
+        }
     }
 }
 struct largeWidget : View {
@@ -73,14 +87,14 @@ struct MainWidgetEntryView : View {
     @Environment(\.widgetFamily) var family: WidgetFamily
     var entry: Provider.Entry
     @ViewBuilder
-       var body: some View {
-           switch family {
-           case .systemSmall: smallWidget(entry:entry)
-           case .systemMedium: mediumWidget(entry:entry)
-           case .systemLarge: largeWidget(entry:entry)
-           default: DataNotAvailable()
-           }
-       }
+    var body: some View {
+        switch family {
+        case .systemSmall: smallWidget(entry:entry)
+        case .systemMedium: mediumWidget(entry:entry)
+        case .systemLarge: largeWidget(entry:entry)
+        default: DataNotAvailable()
+        }
+    }
 }
 
 @main
@@ -93,21 +107,54 @@ struct MainWidget: Widget {
         .configurationDisplayName("iWidget")
         .description("一款Widget百宝箱!")
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
+        
     }
 }
 
 struct IconWidgetItem:View {
-    var icon:String = "qrcode.viewfinder"
-    var title:String = "支付宝扫码"
+    var icon:String = "qrcode"
+    var bottomIcon:String = "alipay"
+    var size: CGFloat = 60
+    var url: String  = "alipayqr://platformapi/startapp?saId=10000007"
     var body: some View {
-        VStack {
-            Image(systemName: icon)
-                .resizable()
-                .frame(width: 80, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            Text(title)
-                .font(.title)
-                .fontWeight(.bold)
+        Link(destination: URL(string: "https://baidu.com")!) {
+            ZStack {
+                ZStack {
+                    Image(icon)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
+                .frame(width: size, height: size, alignment: .center)
+                .zIndex(1)
+                HStack() {
+                    Spacer()
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Image(bottomIcon)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .opacity(1)
+                            
+                        }
+                        .frame(width: size/3, height: size/3, alignment: .center)
+                        .background(Color.white)
+                        .cornerRadius(size/6)
+                        .shadow(radius: 1)
+                    }
+                    
+                }
+                .zIndex(2)
+                
+            }.frame(width: size, height: size, alignment: .center)
         }
     }
 }
 
+
+struct MainWidget_Previews: PreviewProvider {
+    static var previews: some View {
+        MainWidgetEntryView(entry: SimpleEntry(date: Date()))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+    }
+}
