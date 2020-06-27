@@ -1,8 +1,8 @@
 #  iWidget
 ### 效果演示
+> 请耐心等待GIF加载，加载失败请刷新页面。
 
-![Demo.gif](https://s1.ax1x.com/2020/06/27/N66AAO.gif)
-
+<img width="40%" src="https://s1.ax1x.com/2020/06/27/N66AAO.gif" alt="Demo.gif" border="0" />
 
 ### 开发经历分享：
 
