@@ -10,18 +10,32 @@ import SwiftUI
 import Intents
 
 struct OneWordProvider: IntentTimelineProvider {
-    public func snapshot(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
+    public func snapshot(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (OneWordEntry) -> ()) {
+        let entry = OneWordEntry(date: Date(),data: OneWord(content: "一言", length: 2))
         completion(entry)
     }
     
     public func timeline(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         let currentDate = Date()
-        let refreshDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
-        let entry = SimpleEntry(date: currentDate)
-        let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
-        completion(timeline)
+        let refreshDate = Calendar.current.date(byAdding: .minute, value: 60, to: currentDate)!
+          
+        OneWordLoader.fetch { result in
+            let oneWord: OneWord
+            if case .success(let fetchedData) = result {
+                oneWord = fetchedData
+            } else {
+                oneWord = OneWord(content: "获取失败", length: 4)
+            }
+            let entry = OneWordEntry(date: currentDate,data: oneWord)
+            let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
+            completion(timeline)
+        }
     }
+}
+
+struct OneWordEntry: TimelineEntry {
+    public let date: Date
+    public let data: OneWord
 }
 
 struct OneWordEntryView : View {
@@ -31,7 +45,7 @@ struct OneWordEntryView : View {
     
     @ViewBuilder
     var body: some View {
-        OneWordView(content: "一言")
+        OneWordView(content: entry.data.content)
     }
 }
 
@@ -41,8 +55,8 @@ struct OneWordWidget: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: OneWordProvider(), placeholder: PlaceholderView()) { entry in
             OneWordEntryView(entry: entry)
         }
-        .configurationDisplayName("iWidget")
-        .description("一款Widget百宝箱!")
+        .configurationDisplayName("一言")
+        .description("每小时刷新一言")
         .supportedFamilies([.systemSmall, .systemMedium])
         
     }

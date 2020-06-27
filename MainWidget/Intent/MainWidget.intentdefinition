@@ -73,64 +73,6 @@
 			<integer>2</integer>
 			<key>INIntentName</key>
 			<string>Configuration</string>
-			<key>INIntentParameters</key>
-			<array>
-				<dict>
-					<key>INIntentParameterConfigurable</key>
-					<true/>
-					<key>INIntentParameterDisplayName</key>
-					<string>部件功能</string>
-					<key>INIntentParameterDisplayNameID</key>
-					<string>dPtrzx</string>
-					<key>INIntentParameterDisplayPriority</key>
-					<integer>1</integer>
-					<key>INIntentParameterEnumType</key>
-					<string>WidgetKind</string>
-					<key>INIntentParameterEnumTypeNamespace</key>
-					<string>88xZPY</string>
-					<key>INIntentParameterName</key>
-					<string>kind</string>
-					<key>INIntentParameterPromptDialogs</key>
-					<array>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Configuration</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Primary</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>There are ${count} options matching ‘${kind}’.</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>oadthq</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>DisambiguationIntroduction</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>Just to confirm, you wanted ‘${kind}’?</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>HnfIWw</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Confirmation</string>
-						</dict>
-					</array>
-					<key>INIntentParameterTag</key>
-					<integer>2</integer>
-					<key>INIntentParameterType</key>
-					<string>Integer</string>
-				</dict>
-			</array>
 			<key>INIntentResponse</key>
 			<dict>
 				<key>INIntentResponseCodes</key>

@@ -18,9 +18,8 @@ struct PayToolsProvider: IntentTimelineProvider {
     
     public func timeline(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         let currentDate = Date()
-        let refreshDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
         let entry = SimpleEntry(date: currentDate)
-        let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
+        let timeline = Timeline(entries: [entry], policy: .never)
         completion(timeline)
     }
 }
@@ -46,8 +45,8 @@ struct PayToolsWidget: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: PayToolsProvider(), placeholder: PlaceholderView()) { entry in
             PayToolsEntryView(entry: entry)
         }
-        .configurationDisplayName("iWidget")
-        .description("一款Widget百宝箱!")
+        .configurationDisplayName("支付助手")
+        .description("快捷启动扫一扫和支付码")
         .supportedFamilies([.systemSmall, .systemMedium])
         
     }
