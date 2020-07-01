@@ -9,7 +9,10 @@
 ## 开发经历分享：
 
 [WidgetKit开发实战-1](https://juejin.im/post/5ef41fd86fb9a07ea10bb8ec)
+
 [WidgetKit开发实战-2](https://juejin.im/post/5ef72ebbf265da22ec607196)
+
+[WidgetKit开发实战-3](https://juejin.im/post/5ef789b0f265da22fc253d2b)
 
 一款基于iOS14的WidgetKit的小部件集合软件。现有每日一言功能、快捷支付功能，正在完善中。
 
