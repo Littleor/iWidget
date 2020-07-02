@@ -30,13 +30,14 @@ struct Widgets: WidgetBundle {
     var body: some Widget {
         OneWordWidget()
         PayToolsWidget()
+        CountDownWidget()
     }
 }
 
 
 //struct MainWidget_Previews: PreviewProvider {
 //    static var previews: some View {
-//        PayToolsEntryView(entry: SimpleEntry(date: Date()))
+//        CountDownEntryView(entry:CountDownEntry(date: Date(),data: CountDown(day: 1, date: Date(), title: "成年")))
 //            .previewContext(WidgetPreviewContext(family: .systemSmall))
 //    }
 //}

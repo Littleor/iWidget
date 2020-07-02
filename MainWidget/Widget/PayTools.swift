@@ -10,7 +10,7 @@ import SwiftUI
 import Intents
 
 struct PayToolsProvider: IntentTimelineProvider {
-//    typealias Entry = SimpleEntry
+    typealias Entry = SimpleEntry
     public func snapshot(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let entry = SimpleEntry(date: Date())
         completion(entry)

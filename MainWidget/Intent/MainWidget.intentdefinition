@@ -3,51 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>INEnums</key>
-	<array>
-		<dict>
-			<key>INEnumDisplayName</key>
-			<string>Widget Kind</string>
-			<key>INEnumDisplayNameID</key>
-			<string>nTLLBJ</string>
-			<key>INEnumGeneratesHeader</key>
-			<true/>
-			<key>INEnumName</key>
-			<string>WidgetKind</string>
-			<key>INEnumType</key>
-			<string>Regular</string>
-			<key>INEnumValues</key>
-			<array>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>默认</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>cUZf7Q</string>
-					<key>INEnumValueName</key>
-					<string>unknown</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>支付小部件</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>AbvE2i</string>
-					<key>INEnumValueIndex</key>
-					<integer>1</integer>
-					<key>INEnumValueName</key>
-					<string>payTools</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>一言</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>DemXCn</string>
-					<key>INEnumValueIndex</key>
-					<integer>2</integer>
-					<key>INEnumValueName</key>
-					<string>oneWord</string>
-				</dict>
-			</array>
-		</dict>
-	</array>
+	<array/>
 	<key>INIntentDefinitionModelVersion</key>
 	<string>1.2</string>
 	<key>INIntentDefinitionNamespace</key>

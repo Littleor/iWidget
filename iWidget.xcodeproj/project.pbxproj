@@ -28,6 +28,11 @@
 		3119254724A75E0400D06549 /* OneWordWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119254024A75A2900D06549 /* OneWordWidget.swift */; };
 		3119254824A75E0700D06549 /* PayTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119254424A75A8300D06549 /* PayTools.swift */; };
 		3119254924A75E6000D06549 /* MainWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31170D4124A44BCD00557117 /* MainWidget.swift */; };
+		31F8B3AC24AD812200D339FE /* CountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8B3AB24AD812200D339FE /* CountDown.swift */; };
+		31F8B3AE24AD81C600D339FE /* CountDown.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31F8B3AD24AD81C600D339FE /* CountDown.intentdefinition */; };
+		31F8B3AF24AD826A00D339FE /* CountDown.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31F8B3AD24AD81C600D339FE /* CountDown.intentdefinition */; };
+		31F8B3B124AD846C00D339FE /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8B3B024AD846C00D339FE /* CountDownView.swift */; };
+		31F8B3B224AD852C00D339FE /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8B3B024AD846C00D339FE /* CountDownView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +99,9 @@
 		3119253D24A758BF00D06549 /* oneWordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneWordData.swift; sourceTree = "<group>"; };
 		3119254024A75A2900D06549 /* OneWordWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWordWidget.swift; sourceTree = "<group>"; };
 		3119254424A75A8300D06549 /* PayTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTools.swift; sourceTree = "<group>"; };
+		31F8B3AB24AD812200D339FE /* CountDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDown.swift; sourceTree = "<group>"; };
+		31F8B3AD24AD81C600D339FE /* CountDown.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = CountDown.intentdefinition; sourceTree = "<group>"; };
+		31F8B3B024AD846C00D339FE /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +236,7 @@
 			children = (
 				3119253324A740C300D06549 /* PayToolsView.swift */,
 				3119253924A74AF000D06549 /* OneWordView.swift */,
+				31F8B3B024AD846C00D339FE /* CountDownView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -245,6 +254,7 @@
 			children = (
 				3119254024A75A2900D06549 /* OneWordWidget.swift */,
 				3119254424A75A8300D06549 /* PayTools.swift */,
+				31F8B3AB24AD812200D339FE /* CountDown.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -253,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				31170D4324A44BCD00557117 /* MainWidget.intentdefinition */,
+				31F8B3AD24AD81C600D339FE /* CountDown.intentdefinition */,
 			);
 			path = Intent;
 			sourceTree = "<group>";
@@ -419,6 +430,8 @@
 			files = (
 				31170D4824A44BCF00557117 /* MainWidget.intentdefinition in Sources */,
 				3119253A24A74AF000D06549 /* OneWordView.swift in Sources */,
+				31F8B3B124AD846C00D339FE /* CountDownView.swift in Sources */,
+				31F8B3AF24AD826A00D339FE /* CountDown.intentdefinition in Sources */,
 				31170D0D24A4494700557117 /* ContentView.swift in Sources */,
 				31170D0B24A4494700557117 /* iWidgetApp.swift in Sources */,
 				3119253E24A758BF00D06549 /* oneWordData.swift in Sources */,
@@ -448,10 +461,13 @@
 			files = (
 				3119253524A740C300D06549 /* PayToolsView.swift in Sources */,
 				3119254924A75E6000D06549 /* MainWidget.swift in Sources */,
+				31F8B3AE24AD81C600D339FE /* CountDown.intentdefinition in Sources */,
 				3119253F24A758BF00D06549 /* oneWordData.swift in Sources */,
+				31F8B3AC24AD812200D339FE /* CountDown.swift in Sources */,
 				3119253B24A74AF000D06549 /* OneWordView.swift in Sources */,
 				3119254824A75E0700D06549 /* PayTools.swift in Sources */,
 				3119254724A75E0400D06549 /* OneWordWidget.swift in Sources */,
+				31F8B3B224AD852C00D339FE /* CountDownView.swift in Sources */,
 				31170D4724A44BCF00557117 /* MainWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

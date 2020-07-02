@@ -25,6 +25,7 @@
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>ConfigurationIntent</string>
+		<string>CountDownIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
