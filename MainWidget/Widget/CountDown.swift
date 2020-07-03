@@ -14,8 +14,11 @@ import Intents
  */
 extension Date {
     func daysBetweenDate(toDate: Date) -> Int {
-        let components = Calendar.current.dateComponents([.day], from: self, to: toDate)
-        return components.day ?? 0
+        let now = Date()
+        let nowTimeStamp = Int(now.timeIntervalSince1970)
+        let toDateTimeStamp = Int(toDate.timeIntervalSince1970)
+        let difference:Double = Double(abs(nowTimeStamp - toDateTimeStamp))
+        return Int(floor( difference / (86400))) + 1
     }
 }
 
@@ -31,6 +34,7 @@ struct CountDownProvider: IntentTimelineProvider {
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 30, to: currentDate)!
         let configureDate = configuration.date?.date ?? Date()
         let entry = CountDownEntry(date: currentDate,data: CountDown(day: Date().daysBetweenDate(toDate: configureDate),date: configureDate,title: configuration.title ?? "请配置标题" ))
+        print(configureDate)
         let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
         completion(timeline)
     }
