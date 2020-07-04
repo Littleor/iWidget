@@ -25,7 +25,7 @@ extension Date {
 struct CountDownProvider: IntentTimelineProvider {
     //    typealias Entry = CountDownEntry
     public func snapshot(for configuration: CountDownIntent, with context: Context, completion: @escaping (CountDownEntry) -> ()) {
-        let entry = CountDownEntry(date: Date(),data: CountDown(date: Date(),title: "Title"))
+        let entry = CountDownEntry(date: Date(),data: CountDown(date: Date(),title: "爱上iWidget"))
         completion(entry)
     }
     
@@ -64,6 +64,7 @@ struct CountDownEntryView : View {
         default: CountDownView(title: entry.data.title,day: entry.data.day)
         }
     }
+    
 }
 
 struct CountDownWidget: Widget {

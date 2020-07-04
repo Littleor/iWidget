@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CountDownView: View {
-    var title = "Title"
+    var title = "爱上iWidget"
     var day:Int = 0
     var body: some View {
         

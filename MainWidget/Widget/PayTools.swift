@@ -31,11 +31,7 @@ struct PayToolsEntryView : View {
     
     @ViewBuilder
     var body: some View {
-        switch family {
-        case .systemSmall: PayToolsSmallView()
-        case .systemMedium: PayToolsMediumView()
-        default: PayToolsMediumView()
-        }
+        PayToolsMediumView()
     }
 }
 
