@@ -67,10 +67,17 @@ struct CountDownEntryView : View {
     
 }
 
+struct CountDownPlaceholderView : View {
+    //这里是PlaceholderView - 提醒用户选择部件功能
+    var body: some View {
+        CountDownView(title: "爱上iWidget",day: 0)
+    }
+}
+
 struct CountDownWidget: Widget {
     private let kind: String = "CountDownWidget"
     public var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: CountDownIntent.self, provider: CountDownProvider(), placeholder: PlaceholderView()) { entry in
+        IntentConfiguration(kind: kind, intent: CountDownIntent.self, provider: CountDownProvider(), placeholder: CountDownPlaceholderView()) { entry in
             CountDownEntryView(entry: entry)
         }
         .configurationDisplayName("倒计时")

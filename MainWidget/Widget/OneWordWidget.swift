@@ -24,7 +24,7 @@ struct OneWordProvider: IntentTimelineProvider {
             if case .success(let fetchedData) = result {
                 oneWord = fetchedData
             } else {
-                oneWord = OneWord(content: "人类的悲欢并不相通，我只觉得他们吵闹。", length: 19)
+                oneWord = OneWord(content: "很遗憾本次更新失败,等待下一次更新.", length: 18)
             }
             let entry = OneWordEntry(date: currentDate,data: oneWord)
             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
@@ -41,7 +41,7 @@ struct OneWordEntry: TimelineEntry {
 struct OneWordPlaceholderView : View {
     //这里是PlaceholderView - 提醒用户选择部件功能
     var body: some View {
-        Text("人类的悲欢并不相通，我只觉得他们吵闹.")
+        Text("人类的悲欢并不相通，我只觉得他们吵闹。")
     }
 }
 
