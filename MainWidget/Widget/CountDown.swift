@@ -32,7 +32,8 @@ struct CountDownProvider: IntentTimelineProvider {
     public func timeline(for configuration: CountDownIntent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         let currentDate = Date()
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 30, to: currentDate)!
-        let configureDate = configuration.date?.date ?? Date()
+        //Widget输入的日期默认为中午12点
+        let configureDate = (configuration.date?.date  ?? Date()) - 12 * 3600
         let entry = CountDownEntry(date: currentDate,data: CountDown(day: Date().daysBetweenDate(toDate: configureDate),date: configureDate,title: configuration.title ?? "请配置标题" ))
         print(configureDate)
         let timeline = Timeline(entries: [entry], policy: .after(refreshDate))

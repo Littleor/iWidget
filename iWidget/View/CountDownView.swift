@@ -32,7 +32,6 @@ struct CountDownView: View {
                 .foregroundColor(Color.gray)
         }
         .padding(.all)
-        
     }
 }
 
