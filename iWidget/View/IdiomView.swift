@@ -17,22 +17,41 @@ struct IdiomView: View {
     }
     var body: some View {
         
-        VStack(alignment: .center, spacing: 6.0) {
-            HStack{
-                ForEach(Range(uncheckedBounds: (0,pinyins.count))){ i in
-                    VStack {
-                        Text(pinyins[i])
-                            .font(.title2)
-                            .bold()
-                        Text(words[i])
-                            .font(.title2)
-                            .bold()
-                    }.frame(minWidth: 56 )
-                }
+        //        VStack(alignment: .center, spacing: 6.0) {
+        //            HStack{
+        //                ForEach(Range(uncheckedBounds: (0,pinyins.count))){ i in
+        //                    VStack {
+        //                        Text(pinyins[i])
+        //                            .font(.title2)
+        //                            .bold()
+        //                        Text(words[i])
+        //                            .font(.title2)
+        //                            .bold()
+        //                    }.frame(minWidth: 56 )
+        //                }
+        //            }
+        //            Text(idiom.explanation)
+        //                .font(.body)
+        //                .lineLimit(3)
+        //            Text(idiom.derivation)
+        //                .font(.footnote)
+        //                .foregroundColor(.gray)
+        //                .lineLimit(2)
+        //        }.padding(.all)
+        //    }
+        
+        VStack(alignment: .leading, spacing: 10.0) {
+            HStack(alignment: .bottom){
+                Text("“\(idiom.word)”")
+                    .font(.title)
+                    .fontWeight(.light)
+                Text(idiom.pinyin)
+                    .font(.footnote)
+                    .fontWeight(.light)
             }
-//            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/,  maxWidth: .infinity)
             Text(idiom.explanation)
-                .font(.body)
+                .font(.title3)
+                .fontWeight(.bold)
                 .lineLimit(3)
             Text(idiom.derivation)
                 .font(.footnote)
@@ -40,7 +59,6 @@ struct IdiomView: View {
                 .lineLimit(2)
         }.padding(.all)
     }
-    
 }
 
 struct IdiomView_Previews: PreviewProvider {
