@@ -28,6 +28,12 @@
 		3119254724A75E0400D06549 /* OneWordWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119254024A75A2900D06549 /* OneWordWidget.swift */; };
 		3119254824A75E0700D06549 /* PayTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119254424A75A8300D06549 /* PayTools.swift */; };
 		3119254924A75E6000D06549 /* MainWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31170D4124A44BCD00557117 /* MainWidget.swift */; };
+		31BDD21424B356CF00A80C21 /* IdiomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD21324B356CF00A80C21 /* IdiomData.swift */; };
+		31BDD21524B356CF00A80C21 /* IdiomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD21324B356CF00A80C21 /* IdiomData.swift */; };
+		31BDD21724B35B6300A80C21 /* Idiom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD21624B35B6300A80C21 /* Idiom.swift */; };
+		31BDD21824B35B6300A80C21 /* Idiom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD21624B35B6300A80C21 /* Idiom.swift */; };
+		31BDD21A24B35BCA00A80C21 /* IdiomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD21924B35BCA00A80C21 /* IdiomView.swift */; };
+		31BDD21B24B35BCA00A80C21 /* IdiomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD21924B35BCA00A80C21 /* IdiomView.swift */; };
 		31DBC47C24B08CAE00F2436E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBC47B24B08CAE00F2436E /* BlurView.swift */; };
 		31DBC47D24B08ED200F2436E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBC47B24B08CAE00F2436E /* BlurView.swift */; };
 		31E2DE1224B2BFC400937678 /* RSSReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2DE1124B2BFC400937678 /* RSSReader.swift */; };
@@ -108,6 +114,9 @@
 		3119253D24A758BF00D06549 /* oneWordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneWordData.swift; sourceTree = "<group>"; };
 		3119254024A75A2900D06549 /* OneWordWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWordWidget.swift; sourceTree = "<group>"; };
 		3119254424A75A8300D06549 /* PayTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTools.swift; sourceTree = "<group>"; };
+		31BDD21324B356CF00A80C21 /* IdiomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdiomData.swift; sourceTree = "<group>"; };
+		31BDD21624B35B6300A80C21 /* Idiom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idiom.swift; sourceTree = "<group>"; };
+		31BDD21924B35BCA00A80C21 /* IdiomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdiomView.swift; sourceTree = "<group>"; };
 		31DBC47B24B08CAE00F2436E /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		31E2DE0C24B208E200937678 /* RSSData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSData.swift; sourceTree = "<group>"; };
 		31E2DE1124B2BFC400937678 /* RSSReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReader.swift; sourceTree = "<group>"; };
@@ -254,6 +263,7 @@
 				31F8B3B024AD846C00D339FE /* CountDownView.swift */,
 				31DBC47B24B08CAE00F2436E /* BlurView.swift */,
 				31E2DE1324B2C00E00937678 /* RSSReaderView.swift */,
+				31BDD21924B35BCA00A80C21 /* IdiomView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -263,6 +273,7 @@
 			children = (
 				3119253D24A758BF00D06549 /* oneWordData.swift */,
 				31E2DE0C24B208E200937678 /* RSSData.swift */,
+				31BDD21324B356CF00A80C21 /* IdiomData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -274,6 +285,7 @@
 				3119254424A75A8300D06549 /* PayTools.swift */,
 				31F8B3AB24AD812200D339FE /* CountDown.swift */,
 				31E2DE1124B2BFC400937678 /* RSSReader.swift */,
+				31BDD21624B35B6300A80C21 /* Idiom.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -457,12 +469,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				31170D4824A44BCF00557117 /* MainWidget.intentdefinition in Sources */,
+				31BDD21724B35B6300A80C21 /* Idiom.swift in Sources */,
 				3119253A24A74AF000D06549 /* OneWordView.swift in Sources */,
+				31BDD21424B356CF00A80C21 /* IdiomData.swift in Sources */,
 				31E2DE1824B2C1A300937678 /* RSSReader.intentdefinition in Sources */,
 				31F8B3B124AD846C00D339FE /* CountDownView.swift in Sources */,
 				31F8B3AF24AD826A00D339FE /* CountDown.intentdefinition in Sources */,
 				31170D0D24A4494700557117 /* ContentView.swift in Sources */,
 				31E2DE1424B2C00E00937678 /* RSSReaderView.swift in Sources */,
+				31BDD21A24B35BCA00A80C21 /* IdiomView.swift in Sources */,
 				31170D0B24A4494700557117 /* iWidgetApp.swift in Sources */,
 				3119253E24A758BF00D06549 /* oneWordData.swift in Sources */,
 				31DBC47C24B08CAE00F2436E /* BlurView.swift in Sources */,
@@ -496,6 +511,9 @@
 				31F8B3AE24AD81C600D339FE /* CountDown.intentdefinition in Sources */,
 				3119253F24A758BF00D06549 /* oneWordData.swift in Sources */,
 				31E2DE1524B2C01100937678 /* RSSReaderView.swift in Sources */,
+				31BDD21824B35B6300A80C21 /* Idiom.swift in Sources */,
+				31BDD21B24B35BCA00A80C21 /* IdiomView.swift in Sources */,
+				31BDD21524B356CF00A80C21 /* IdiomData.swift in Sources */,
 				31DBC47D24B08ED200F2436E /* BlurView.swift in Sources */,
 				31E2DE1224B2BFC400937678 /* RSSReader.swift in Sources */,
 				31F8B3AC24AD812200D339FE /* CountDown.swift in Sources */,

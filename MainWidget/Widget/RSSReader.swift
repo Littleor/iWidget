@@ -71,7 +71,6 @@ struct RSSReaderEntryView : View {
         default:
             RSSReaderView(title: entry.data.channel?.title ?? "iWidget", itemTitle: entry.data.items?.first?.title ?? "iOS14首款小部件集合软件发布-iWidget", itemDesc: entry.data.items?.first?.description ?? "iOS14首款小部件集合软件发布-iWidget", itemPubDate: (entry.data.items?.first?.pubDate ?? Date()).getRelateiveDate(unitsStyle: .short),url: entry.data.items?.first?.link ?? "https://sixming.com")
         }
-        
     }
 }
 

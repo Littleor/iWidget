@@ -32,6 +32,7 @@ struct Widgets: WidgetBundle {
         PayToolsWidget()
         CountDownWidget()
         RSSReaderWidget()
+        IdiomWidget()
     }
 }
 
