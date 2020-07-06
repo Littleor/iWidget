@@ -18,7 +18,7 @@ struct OneWordProvider: IntentTimelineProvider {
     public func timeline(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         let currentDate = Date()
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 60, to: currentDate)!
-          
+        //逃逸闭包传入匿名函数 当调用completion时调用该匿名函数刷新Widget
         OneWordLoader.fetch { result in
             let oneWord: OneWord
             if case .success(let fetchedData) = result {

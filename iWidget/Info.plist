@@ -26,6 +26,7 @@
 	<array>
 		<string>ConfigurationIntent</string>
 		<string>CountDownIntent</string>
+		<string>RSSReaderIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

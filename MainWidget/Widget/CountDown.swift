@@ -20,6 +20,18 @@ extension Date {
         let difference:Double = Double(abs(nowTimeStamp - toDateTimeStamp))
         return Int(floor( difference / (86400))) + 1
     }
+    func dateToString(_ date:Date,dateFormat:String = "yyyy-MM-dd HH:mm:ss") -> String {
+        let formatter = DateFormatter()
+         formatter.locale = Locale.init(identifier: "zh_CN")
+         formatter.dateFormat = dateFormat
+         let date = formatter.string(from: date)
+         return date
+    }
+    func getRelateiveDate(unitsStyle: RelativeDateTimeFormatter.UnitsStyle)->String{
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = unitsStyle
+        return formatter.localizedString(for: self, relativeTo: Date())
+    }
 }
 
 struct CountDownProvider: IntentTimelineProvider {

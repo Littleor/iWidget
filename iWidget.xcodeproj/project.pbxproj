@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,6 +30,13 @@
 		3119254924A75E6000D06549 /* MainWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31170D4124A44BCD00557117 /* MainWidget.swift */; };
 		31DBC47C24B08CAE00F2436E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBC47B24B08CAE00F2436E /* BlurView.swift */; };
 		31DBC47D24B08ED200F2436E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBC47B24B08CAE00F2436E /* BlurView.swift */; };
+		31E2DE1224B2BFC400937678 /* RSSReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2DE1124B2BFC400937678 /* RSSReader.swift */; };
+		31E2DE1424B2C00E00937678 /* RSSReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2DE1324B2C00E00937678 /* RSSReaderView.swift */; };
+		31E2DE1524B2C01100937678 /* RSSReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2DE1324B2C00E00937678 /* RSSReaderView.swift */; };
+		31E2DE1624B2C11000937678 /* RSSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2DE0C24B208E200937678 /* RSSData.swift */; };
+		31E2DE1824B2C1A300937678 /* RSSReader.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31E2DE1724B2C1A300937678 /* RSSReader.intentdefinition */; };
+		31E2DE1924B2C1A300937678 /* RSSReader.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31E2DE1724B2C1A300937678 /* RSSReader.intentdefinition */; };
+		31E2DE1B24B2C45B00937678 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = 31E2DE1A24B2C45B00937678 /* FeedKit */; };
 		31F8B3AC24AD812200D339FE /* CountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8B3AB24AD812200D339FE /* CountDown.swift */; };
 		31F8B3AE24AD81C600D339FE /* CountDown.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31F8B3AD24AD81C600D339FE /* CountDown.intentdefinition */; };
 		31F8B3AF24AD826A00D339FE /* CountDown.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31F8B3AD24AD81C600D339FE /* CountDown.intentdefinition */; };
@@ -102,6 +109,10 @@
 		3119254024A75A2900D06549 /* OneWordWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWordWidget.swift; sourceTree = "<group>"; };
 		3119254424A75A8300D06549 /* PayTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTools.swift; sourceTree = "<group>"; };
 		31DBC47B24B08CAE00F2436E /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		31E2DE0C24B208E200937678 /* RSSData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSData.swift; sourceTree = "<group>"; };
+		31E2DE1124B2BFC400937678 /* RSSReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReader.swift; sourceTree = "<group>"; };
+		31E2DE1324B2C00E00937678 /* RSSReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReaderView.swift; sourceTree = "<group>"; };
+		31E2DE1724B2C1A300937678 /* RSSReader.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = RSSReader.intentdefinition; sourceTree = "<group>"; };
 		31F8B3AB24AD812200D339FE /* CountDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDown.swift; sourceTree = "<group>"; };
 		31F8B3AD24AD81C600D339FE /* CountDown.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = CountDown.intentdefinition; sourceTree = "<group>"; };
 		31F8B3B024AD846C00D339FE /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
@@ -133,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31E2DE1B24B2C45B00937678 /* FeedKit in Frameworks */,
 				31170D3F24A44BCD00557117 /* SwiftUI.framework in Frameworks */,
 				31170D3D24A44BCD00557117 /* WidgetKit.framework in Frameworks */,
 			);
@@ -241,6 +253,7 @@
 				3119253924A74AF000D06549 /* OneWordView.swift */,
 				31F8B3B024AD846C00D339FE /* CountDownView.swift */,
 				31DBC47B24B08CAE00F2436E /* BlurView.swift */,
+				31E2DE1324B2C00E00937678 /* RSSReaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				3119253D24A758BF00D06549 /* oneWordData.swift */,
+				31E2DE0C24B208E200937678 /* RSSData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -259,6 +273,7 @@
 				3119254024A75A2900D06549 /* OneWordWidget.swift */,
 				3119254424A75A8300D06549 /* PayTools.swift */,
 				31F8B3AB24AD812200D339FE /* CountDown.swift */,
+				31E2DE1124B2BFC400937678 /* RSSReader.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -268,6 +283,7 @@
 			children = (
 				31170D4324A44BCD00557117 /* MainWidget.intentdefinition */,
 				31F8B3AD24AD81C600D339FE /* CountDown.intentdefinition */,
+				31E2DE1724B2C1A300937678 /* RSSReader.intentdefinition */,
 			);
 			path = Intent;
 			sourceTree = "<group>";
@@ -290,6 +306,8 @@
 				31170D4A24A44BCF00557117 /* PBXTargetDependency */,
 			);
 			name = iWidget;
+			packageProductDependencies = (
+			);
 			productName = iWidget;
 			productReference = 31170D0724A4494700557117 /* iWidget.app */;
 			productType = "com.apple.product-type.application";
@@ -343,6 +361,9 @@
 			dependencies = (
 			);
 			name = MainWidgetExtension;
+			packageProductDependencies = (
+				31E2DE1A24B2C45B00937678 /* FeedKit */,
+			);
 			productName = MainWidgetExtension;
 			productReference = 31170D3A24A44BCD00557117 /* MainWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -381,6 +402,9 @@
 				Base,
 			);
 			mainGroup = 31170CFE24A4494700557117;
+			packageReferences = (
+				31E2DE0E24B2125000937678 /* XCRemoteSwiftPackageReference "FeedKit" */,
+			);
 			productRefGroup = 31170D0824A4494700557117 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -434,9 +458,11 @@
 			files = (
 				31170D4824A44BCF00557117 /* MainWidget.intentdefinition in Sources */,
 				3119253A24A74AF000D06549 /* OneWordView.swift in Sources */,
+				31E2DE1824B2C1A300937678 /* RSSReader.intentdefinition in Sources */,
 				31F8B3B124AD846C00D339FE /* CountDownView.swift in Sources */,
 				31F8B3AF24AD826A00D339FE /* CountDown.intentdefinition in Sources */,
 				31170D0D24A4494700557117 /* ContentView.swift in Sources */,
+				31E2DE1424B2C00E00937678 /* RSSReaderView.swift in Sources */,
 				31170D0B24A4494700557117 /* iWidgetApp.swift in Sources */,
 				3119253E24A758BF00D06549 /* oneWordData.swift in Sources */,
 				31DBC47C24B08CAE00F2436E /* BlurView.swift in Sources */,
@@ -464,17 +490,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31E2DE1624B2C11000937678 /* RSSData.swift in Sources */,
 				3119253524A740C300D06549 /* PayToolsView.swift in Sources */,
 				3119254924A75E6000D06549 /* MainWidget.swift in Sources */,
 				31F8B3AE24AD81C600D339FE /* CountDown.intentdefinition in Sources */,
 				3119253F24A758BF00D06549 /* oneWordData.swift in Sources */,
+				31E2DE1524B2C01100937678 /* RSSReaderView.swift in Sources */,
 				31DBC47D24B08ED200F2436E /* BlurView.swift in Sources */,
+				31E2DE1224B2BFC400937678 /* RSSReader.swift in Sources */,
 				31F8B3AC24AD812200D339FE /* CountDown.swift in Sources */,
 				3119253B24A74AF000D06549 /* OneWordView.swift in Sources */,
 				3119254824A75E0700D06549 /* PayTools.swift in Sources */,
 				3119254724A75E0400D06549 /* OneWordWidget.swift in Sources */,
 				31F8B3B224AD852C00D339FE /* CountDownView.swift in Sources */,
 				31170D4724A44BCF00557117 /* MainWidget.intentdefinition in Sources */,
+				31E2DE1924B2C1A300937678 /* RSSReader.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,6 +866,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		31E2DE0E24B2125000937678 /* XCRemoteSwiftPackageReference "FeedKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nmdias/FeedKit/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		31E2DE1A24B2C45B00937678 /* FeedKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 31E2DE0E24B2125000937678 /* XCRemoteSwiftPackageReference "FeedKit" */;
+			productName = FeedKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 31170CFF24A4494700557117 /* Project object */;
 }
