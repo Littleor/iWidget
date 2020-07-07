@@ -16,8 +16,6 @@
 		31170D3D24A44BCD00557117 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31170D3C24A44BCD00557117 /* WidgetKit.framework */; };
 		31170D3F24A44BCD00557117 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31170D3E24A44BCD00557117 /* SwiftUI.framework */; };
 		31170D4524A44BCF00557117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31170D4424A44BCF00557117 /* Assets.xcassets */; };
-		31170D4724A44BCF00557117 /* MainWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31170D4324A44BCD00557117 /* MainWidget.intentdefinition */; };
-		31170D4824A44BCF00557117 /* MainWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31170D4324A44BCD00557117 /* MainWidget.intentdefinition */; };
 		31170D4B24A44BCF00557117 /* MainWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 31170D3A24A44BCD00557117 /* MainWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3119253424A740C300D06549 /* PayToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119253324A740C300D06549 /* PayToolsView.swift */; };
 		3119253524A740C300D06549 /* PayToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119253324A740C300D06549 /* PayToolsView.swift */; };
@@ -34,18 +32,20 @@
 		31BDD21824B35B6300A80C21 /* Idiom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD21624B35B6300A80C21 /* Idiom.swift */; };
 		31BDD21A24B35BCA00A80C21 /* IdiomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD21924B35BCA00A80C21 /* IdiomView.swift */; };
 		31BDD21B24B35BCA00A80C21 /* IdiomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD21924B35BCA00A80C21 /* IdiomView.swift */; };
+		31BDD21C24B403B700A80C21 /* MainWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD21F24B403B700A80C21 /* MainWidget.intentdefinition */; };
+		31BDD21D24B403B700A80C21 /* MainWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD21F24B403B700A80C21 /* MainWidget.intentdefinition */; };
+		31BDD22024B403BD00A80C21 /* CountDown.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD22324B403BD00A80C21 /* CountDown.intentdefinition */; };
+		31BDD22124B403BD00A80C21 /* CountDown.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD22324B403BD00A80C21 /* CountDown.intentdefinition */; };
+		31BDD22424B403C400A80C21 /* RSSReader.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD22724B403C400A80C21 /* RSSReader.intentdefinition */; };
+		31BDD22524B403C400A80C21 /* RSSReader.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD22724B403C400A80C21 /* RSSReader.intentdefinition */; };
 		31DBC47C24B08CAE00F2436E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBC47B24B08CAE00F2436E /* BlurView.swift */; };
 		31DBC47D24B08ED200F2436E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBC47B24B08CAE00F2436E /* BlurView.swift */; };
 		31E2DE1224B2BFC400937678 /* RSSReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2DE1124B2BFC400937678 /* RSSReader.swift */; };
 		31E2DE1424B2C00E00937678 /* RSSReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2DE1324B2C00E00937678 /* RSSReaderView.swift */; };
 		31E2DE1524B2C01100937678 /* RSSReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2DE1324B2C00E00937678 /* RSSReaderView.swift */; };
 		31E2DE1624B2C11000937678 /* RSSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2DE0C24B208E200937678 /* RSSData.swift */; };
-		31E2DE1824B2C1A300937678 /* RSSReader.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31E2DE1724B2C1A300937678 /* RSSReader.intentdefinition */; };
-		31E2DE1924B2C1A300937678 /* RSSReader.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31E2DE1724B2C1A300937678 /* RSSReader.intentdefinition */; };
 		31E2DE1B24B2C45B00937678 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = 31E2DE1A24B2C45B00937678 /* FeedKit */; };
 		31F8B3AC24AD812200D339FE /* CountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8B3AB24AD812200D339FE /* CountDown.swift */; };
-		31F8B3AE24AD81C600D339FE /* CountDown.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31F8B3AD24AD81C600D339FE /* CountDown.intentdefinition */; };
-		31F8B3AF24AD826A00D339FE /* CountDown.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31F8B3AD24AD81C600D339FE /* CountDown.intentdefinition */; };
 		31F8B3B124AD846C00D339FE /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8B3B024AD846C00D339FE /* CountDownView.swift */; };
 		31F8B3B224AD852C00D339FE /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8B3B024AD846C00D339FE /* CountDownView.swift */; };
 /* End PBXBuildFile section */
@@ -106,7 +106,6 @@
 		31170D3C24A44BCD00557117 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		31170D3E24A44BCD00557117 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		31170D4124A44BCD00557117 /* MainWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWidget.swift; sourceTree = "<group>"; };
-		31170D4324A44BCD00557117 /* MainWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MainWidget.intentdefinition; sourceTree = "<group>"; };
 		31170D4424A44BCF00557117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31170D4624A44BCF00557117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3119253324A740C300D06549 /* PayToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayToolsView.swift; sourceTree = "<group>"; };
@@ -117,13 +116,17 @@
 		31BDD21324B356CF00A80C21 /* IdiomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdiomData.swift; sourceTree = "<group>"; };
 		31BDD21624B35B6300A80C21 /* Idiom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idiom.swift; sourceTree = "<group>"; };
 		31BDD21924B35BCA00A80C21 /* IdiomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdiomView.swift; sourceTree = "<group>"; };
+		31BDD21E24B403B700A80C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/MainWidget.intentdefinition; sourceTree = "<group>"; };
+		31BDD22224B403BD00A80C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/CountDown.intentdefinition; sourceTree = "<group>"; };
+		31BDD22624B403C400A80C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/RSSReader.intentdefinition; sourceTree = "<group>"; };
+		31BDD22924B403C800A80C21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainWidget.strings; sourceTree = "<group>"; };
+		31BDD22B24B403D100A80C21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CountDown.strings; sourceTree = "<group>"; };
+		31BDD22D24B403D300A80C21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RSSReader.strings; sourceTree = "<group>"; };
 		31DBC47B24B08CAE00F2436E /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		31E2DE0C24B208E200937678 /* RSSData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSData.swift; sourceTree = "<group>"; };
 		31E2DE1124B2BFC400937678 /* RSSReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReader.swift; sourceTree = "<group>"; };
 		31E2DE1324B2C00E00937678 /* RSSReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReaderView.swift; sourceTree = "<group>"; };
-		31E2DE1724B2C1A300937678 /* RSSReader.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = RSSReader.intentdefinition; sourceTree = "<group>"; };
 		31F8B3AB24AD812200D339FE /* CountDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDown.swift; sourceTree = "<group>"; };
-		31F8B3AD24AD81C600D339FE /* CountDown.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = CountDown.intentdefinition; sourceTree = "<group>"; };
 		31F8B3B024AD846C00D339FE /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,9 +296,9 @@
 		3119254624A75AD500D06549 /* Intent */ = {
 			isa = PBXGroup;
 			children = (
-				31170D4324A44BCD00557117 /* MainWidget.intentdefinition */,
-				31F8B3AD24AD81C600D339FE /* CountDown.intentdefinition */,
-				31E2DE1724B2C1A300937678 /* RSSReader.intentdefinition */,
+				31BDD21F24B403B700A80C21 /* MainWidget.intentdefinition */,
+				31BDD22324B403BD00A80C21 /* CountDown.intentdefinition */,
+				31BDD22724B403C400A80C21 /* RSSReader.intentdefinition */,
 			);
 			path = Intent;
 			sourceTree = "<group>";
@@ -468,13 +471,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31170D4824A44BCF00557117 /* MainWidget.intentdefinition in Sources */,
+				31BDD21C24B403B700A80C21 /* MainWidget.intentdefinition in Sources */,
 				31BDD21724B35B6300A80C21 /* Idiom.swift in Sources */,
 				3119253A24A74AF000D06549 /* OneWordView.swift in Sources */,
 				31BDD21424B356CF00A80C21 /* IdiomData.swift in Sources */,
-				31E2DE1824B2C1A300937678 /* RSSReader.intentdefinition in Sources */,
+				31BDD22424B403C400A80C21 /* RSSReader.intentdefinition in Sources */,
 				31F8B3B124AD846C00D339FE /* CountDownView.swift in Sources */,
-				31F8B3AF24AD826A00D339FE /* CountDown.intentdefinition in Sources */,
+				31BDD22024B403BD00A80C21 /* CountDown.intentdefinition in Sources */,
 				31170D0D24A4494700557117 /* ContentView.swift in Sources */,
 				31E2DE1424B2C00E00937678 /* RSSReaderView.swift in Sources */,
 				31BDD21A24B35BCA00A80C21 /* IdiomView.swift in Sources */,
@@ -508,7 +511,7 @@
 				31E2DE1624B2C11000937678 /* RSSData.swift in Sources */,
 				3119253524A740C300D06549 /* PayToolsView.swift in Sources */,
 				3119254924A75E6000D06549 /* MainWidget.swift in Sources */,
-				31F8B3AE24AD81C600D339FE /* CountDown.intentdefinition in Sources */,
+				31BDD22124B403BD00A80C21 /* CountDown.intentdefinition in Sources */,
 				3119253F24A758BF00D06549 /* oneWordData.swift in Sources */,
 				31E2DE1524B2C01100937678 /* RSSReaderView.swift in Sources */,
 				31BDD21824B35B6300A80C21 /* Idiom.swift in Sources */,
@@ -521,8 +524,8 @@
 				3119254824A75E0700D06549 /* PayTools.swift in Sources */,
 				3119254724A75E0400D06549 /* OneWordWidget.swift in Sources */,
 				31F8B3B224AD852C00D339FE /* CountDownView.swift in Sources */,
-				31170D4724A44BCF00557117 /* MainWidget.intentdefinition in Sources */,
-				31E2DE1924B2C1A300937678 /* RSSReader.intentdefinition in Sources */,
+				31BDD21D24B403B700A80C21 /* MainWidget.intentdefinition in Sources */,
+				31BDD22524B403C400A80C21 /* RSSReader.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +548,36 @@
 			targetProxy = 31170D4924A44BCF00557117 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		31BDD21F24B403B700A80C21 /* MainWidget.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31BDD21E24B403B700A80C21 /* Base */,
+				31BDD22924B403C800A80C21 /* en */,
+			);
+			name = MainWidget.intentdefinition;
+			sourceTree = "<group>";
+		};
+		31BDD22324B403BD00A80C21 /* CountDown.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31BDD22224B403BD00A80C21 /* Base */,
+				31BDD22B24B403D100A80C21 /* en */,
+			);
+			name = CountDown.intentdefinition;
+			sourceTree = "<group>";
+		};
+		31BDD22724B403C400A80C21 /* RSSReader.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31BDD22624B403C400A80C21 /* Base */,
+				31BDD22D24B403D300A80C21 /* en */,
+			);
+			name = RSSReader.intentdefinition;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		31170D2A24A4494900557117 /* Debug */ = {
