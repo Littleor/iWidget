@@ -3,12 +3,13 @@
 > 请耐心等待GIF加载，加载失败请刷新页面。
 
 
-<div style="display:flex;">
+<div style="display:flex;flex-direction:column;flex-wrap: nowrap;">
 <!--<img width="40%" src="https://s1.ax1x.com/2020/06/27/N66AAO.gif" alt="Demo.gif" border="0" />-->
-<img src="https://s1.ax1x.com/2020/07/08/UELwGT.png" alt="IMG 1220" border="0">
-<img src="https://s1.ax1x.com/2020/07/08/UEL0RU.png" alt="IMG 1219" border="0">
+<img width="50%" src="https://s1.ax1x.com/2020/07/08/UELwGT.png" alt="IMG 1220" border="0">
+<img width="50%" src="https://s1.ax1x.com/2020/07/08/UEL0RU.png" alt="IMG 1219" border="0">
 </div>
-## 开发经历分享：
+
+## 开发经历分享
 
 [WidgetKit开发实战-1](https://juejin.im/post/5ef41fd86fb9a07ea10bb8ec)
 
