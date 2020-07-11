@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State var showWidget = false
-    @State var viewState = CGSize.zero
+    @GestureState private var dragOffset: CGFloat = 0
+    @State private var position = CGSize.zero
     var body: some View {
-        
         NavigationView {
             VStack {
                 HStack {
@@ -22,33 +22,38 @@ struct ContentView: View {
                 }
                 .blur(radius: showWidget ? 20 : 0)
                 Spacer()
-                ZStack{
+                
+                ZStack(alignment: Alignment(horizontal: .center, vertical: .center)){
                     WidgetCardView(kind: "RSSReader")
-                        .offset(x: 0, y: showWidget ? -450.0 : -60.0)
+                        .offset(x: 0, y: showWidget ? (-450.0 + dragOffset + position.height)  : -60.0)
                         .scaleEffect(0.85)
-                        .rotationEffect(Angle(degrees: showWidget ? 4 : 0))
+//                        .rotationEffect(Angle(degrees: showWidget ? 4 : 0))
                         .animation(.easeIn)
                     
                     WidgetCardView(kind: "Idiom")
-                        .offset(x: 0, y: showWidget ? -300.0 : -40.0)
+                        .offset(x: 0, y: showWidget ? (-300.0 + dragOffset + position.height)  : -40.0)
                         .scaleEffect(0.90)
-                        .rotationEffect(Angle(degrees: showWidget ? 3 : 0))
+//                        .rotationEffect(Angle(degrees: showWidget ? 3 : 0))
                         .animation(.easeIn)
                     
                     WidgetCardView(kind: "oneWord")
-                        .offset(x: 0, y: showWidget ? -150.0 : -20.0)
+                        .offset(x: 0, y: showWidget ? (-150.0 + dragOffset + position.height) : -20.0)
                         .scaleEffect(0.95)
-                        .rotationEffect(Angle(degrees: showWidget ? 2 : 0))
+//                        .rotationEffect(Angle(degrees: showWidget ? 2 : 0))
                         .animation(.easeIn)
                     
                     WidgetCardView()
-                        .rotationEffect(Angle(degrees: showWidget ? 1 : 0))
+                        .offset(x: 0, y: showWidget ? (0 + dragOffset + position.height) : 0)
+//                        .rotationEffect(Angle(degrees: showWidget ? 1 : 0))
                         .animation(.spring())
                         .onTapGesture {
                             self.showWidget.toggle()
+                            self.position = CGSize.zero
                         }
                 }
+                
                 Spacer()
+                
                 VStack{
                     Text("一款简单开源的小部件工具箱")
                         .font(.footnote)
@@ -70,8 +75,18 @@ struct ContentView: View {
                 }.blur(radius: showWidget ? 20 : 0)
                 
             }
-            
         }
+        
+        .gesture(
+            DragGesture()
+                .updating($dragOffset) { (value, gestureState, transaction) in
+                    let delta = value.location.y - value.startLocation.y
+                    gestureState = delta
+                }
+                .onEnded {
+                    self.position.height = $0.translation.height
+                }
+        )
         .onOpenURL(perform: { (url) in
             UIApplication.shared.open(url)
         })
