@@ -40,7 +40,8 @@ struct IdiomView: View {
         //        }.padding(.all)
         //    }
         
-        VStack(alignment: .leading, spacing: 10.0) {
+        VStack(alignment: .leading, spacing: 2.0) {
+            Spacer()
             HStack(alignment: .bottom){
                 Text("“\(idiom.word)”")
                     .font(.title)
@@ -49,14 +50,17 @@ struct IdiomView: View {
                     .font(.footnote)
                     .fontWeight(.light)
             }
+            Spacer()
             Text(idiom.explanation)
-                .font(.title3)
+                .font(.body)
                 .fontWeight(.bold)
                 .lineLimit(3)
+            Spacer()
             Text(idiom.derivation)
                 .font(.footnote)
                 .foregroundColor(.gray)
                 .lineLimit(2)
+            Spacer()
         }.padding(.all)
     }
 }

@@ -28,11 +28,12 @@ struct PlaceholderView : View {
 struct Widgets: WidgetBundle {
     @WidgetBundleBuilder
     var body: some Widget {
-        OneWordWidget()
+//        OneWordWidget()
         PayToolsWidget()
         CountDownWidget()
         RSSReaderWidget()
         IdiomWidget()
+        EnglishWordWidget()
     }
 }
 

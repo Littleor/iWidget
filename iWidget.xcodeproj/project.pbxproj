@@ -26,6 +26,12 @@
 		3119254724A75E0400D06549 /* OneWordWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119254024A75A2900D06549 /* OneWordWidget.swift */; };
 		3119254824A75E0700D06549 /* PayTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3119254424A75A8300D06549 /* PayTools.swift */; };
 		3119254924A75E6000D06549 /* MainWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31170D4124A44BCD00557117 /* MainWidget.swift */; };
+		3121838324BC8AF2003DC91C /* EnglishWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3121838124BC8AEE003DC91C /* EnglishWord.swift */; };
+		3121838424BC8AF6003DC91C /* EnglishWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3121838124BC8AEE003DC91C /* EnglishWord.swift */; };
+		3121838624BC8B18003DC91C /* EnglishWordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3121838524BC8B18003DC91C /* EnglishWordData.swift */; };
+		3121838724BC8B18003DC91C /* EnglishWordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3121838524BC8B18003DC91C /* EnglishWordData.swift */; };
+		3121838924BC937B003DC91C /* EnglishWord.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3121838824BC937B003DC91C /* EnglishWord.intentdefinition */; };
+		3179C81224BC94F200E31846 /* EnglishWord.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3121838824BC937B003DC91C /* EnglishWord.intentdefinition */; };
 		31BDD21424B356CF00A80C21 /* IdiomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD21324B356CF00A80C21 /* IdiomData.swift */; };
 		31BDD21524B356CF00A80C21 /* IdiomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD21324B356CF00A80C21 /* IdiomData.swift */; };
 		31BDD21724B35B6300A80C21 /* Idiom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD21624B35B6300A80C21 /* Idiom.swift */; };
@@ -38,6 +44,8 @@
 		31BDD22124B403BD00A80C21 /* CountDown.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD22324B403BD00A80C21 /* CountDown.intentdefinition */; };
 		31BDD22424B403C400A80C21 /* RSSReader.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD22724B403C400A80C21 /* RSSReader.intentdefinition */; };
 		31BDD22524B403C400A80C21 /* RSSReader.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 31BDD22724B403C400A80C21 /* RSSReader.intentdefinition */; };
+		31BFEACB24BC97460066A562 /* EnglishWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BFEACA24BC97460066A562 /* EnglishWordView.swift */; };
+		31BFEACC24BC97460066A562 /* EnglishWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BFEACA24BC97460066A562 /* EnglishWordView.swift */; };
 		31DBC47C24B08CAE00F2436E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBC47B24B08CAE00F2436E /* BlurView.swift */; };
 		31DBC47D24B08ED200F2436E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBC47B24B08CAE00F2436E /* BlurView.swift */; };
 		31E2DE1224B2BFC400937678 /* RSSReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2DE1124B2BFC400937678 /* RSSReader.swift */; };
@@ -113,6 +121,9 @@
 		3119253D24A758BF00D06549 /* oneWordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneWordData.swift; sourceTree = "<group>"; };
 		3119254024A75A2900D06549 /* OneWordWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWordWidget.swift; sourceTree = "<group>"; };
 		3119254424A75A8300D06549 /* PayTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTools.swift; sourceTree = "<group>"; };
+		3121838124BC8AEE003DC91C /* EnglishWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishWord.swift; sourceTree = "<group>"; };
+		3121838524BC8B18003DC91C /* EnglishWordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishWordData.swift; sourceTree = "<group>"; };
+		3121838824BC937B003DC91C /* EnglishWord.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = EnglishWord.intentdefinition; sourceTree = "<group>"; };
 		31BDD21324B356CF00A80C21 /* IdiomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdiomData.swift; sourceTree = "<group>"; };
 		31BDD21624B35B6300A80C21 /* Idiom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idiom.swift; sourceTree = "<group>"; };
 		31BDD21924B35BCA00A80C21 /* IdiomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdiomView.swift; sourceTree = "<group>"; };
@@ -122,6 +133,7 @@
 		31BDD22924B403C800A80C21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainWidget.strings; sourceTree = "<group>"; };
 		31BDD22B24B403D100A80C21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CountDown.strings; sourceTree = "<group>"; };
 		31BDD22D24B403D300A80C21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RSSReader.strings; sourceTree = "<group>"; };
+		31BFEACA24BC97460066A562 /* EnglishWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishWordView.swift; sourceTree = "<group>"; };
 		31DBC47B24B08CAE00F2436E /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		31E2DE0C24B208E200937678 /* RSSData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSData.swift; sourceTree = "<group>"; };
 		31E2DE1124B2BFC400937678 /* RSSReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSReader.swift; sourceTree = "<group>"; };
@@ -267,6 +279,7 @@
 				31DBC47B24B08CAE00F2436E /* BlurView.swift */,
 				31E2DE1324B2C00E00937678 /* RSSReaderView.swift */,
 				31BDD21924B35BCA00A80C21 /* IdiomView.swift */,
+				31BFEACA24BC97460066A562 /* EnglishWordView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,6 +290,7 @@
 				3119253D24A758BF00D06549 /* oneWordData.swift */,
 				31E2DE0C24B208E200937678 /* RSSData.swift */,
 				31BDD21324B356CF00A80C21 /* IdiomData.swift */,
+				3121838524BC8B18003DC91C /* EnglishWordData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -289,6 +303,7 @@
 				31F8B3AB24AD812200D339FE /* CountDown.swift */,
 				31E2DE1124B2BFC400937678 /* RSSReader.swift */,
 				31BDD21624B35B6300A80C21 /* Idiom.swift */,
+				3121838124BC8AEE003DC91C /* EnglishWord.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -299,6 +314,7 @@
 				31BDD21F24B403B700A80C21 /* MainWidget.intentdefinition */,
 				31BDD22324B403BD00A80C21 /* CountDown.intentdefinition */,
 				31BDD22724B403C400A80C21 /* RSSReader.intentdefinition */,
+				3121838824BC937B003DC91C /* EnglishWord.intentdefinition */,
 			);
 			path = Intent;
 			sourceTree = "<group>";
@@ -471,16 +487,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3121838624BC8B18003DC91C /* EnglishWordData.swift in Sources */,
 				31BDD21C24B403B700A80C21 /* MainWidget.intentdefinition in Sources */,
 				31BDD21724B35B6300A80C21 /* Idiom.swift in Sources */,
 				3119253A24A74AF000D06549 /* OneWordView.swift in Sources */,
 				31BDD21424B356CF00A80C21 /* IdiomData.swift in Sources */,
+				31BFEACB24BC97460066A562 /* EnglishWordView.swift in Sources */,
 				31BDD22424B403C400A80C21 /* RSSReader.intentdefinition in Sources */,
 				31F8B3B124AD846C00D339FE /* CountDownView.swift in Sources */,
+				3121838924BC937B003DC91C /* EnglishWord.intentdefinition in Sources */,
 				31BDD22024B403BD00A80C21 /* CountDown.intentdefinition in Sources */,
 				31170D0D24A4494700557117 /* ContentView.swift in Sources */,
 				31E2DE1424B2C00E00937678 /* RSSReaderView.swift in Sources */,
 				31BDD21A24B35BCA00A80C21 /* IdiomView.swift in Sources */,
+				3121838424BC8AF6003DC91C /* EnglishWord.swift in Sources */,
 				31170D0B24A4494700557117 /* iWidgetApp.swift in Sources */,
 				3119253E24A758BF00D06549 /* oneWordData.swift in Sources */,
 				31DBC47C24B08CAE00F2436E /* BlurView.swift in Sources */,
@@ -512,14 +532,18 @@
 				3119253524A740C300D06549 /* PayToolsView.swift in Sources */,
 				3119254924A75E6000D06549 /* MainWidget.swift in Sources */,
 				31BDD22124B403BD00A80C21 /* CountDown.intentdefinition in Sources */,
+				3179C81224BC94F200E31846 /* EnglishWord.intentdefinition in Sources */,
+				3121838724BC8B18003DC91C /* EnglishWordData.swift in Sources */,
 				3119253F24A758BF00D06549 /* oneWordData.swift in Sources */,
 				31E2DE1524B2C01100937678 /* RSSReaderView.swift in Sources */,
 				31BDD21824B35B6300A80C21 /* Idiom.swift in Sources */,
 				31BDD21B24B35BCA00A80C21 /* IdiomView.swift in Sources */,
 				31BDD21524B356CF00A80C21 /* IdiomData.swift in Sources */,
 				31DBC47D24B08ED200F2436E /* BlurView.swift in Sources */,
+				3121838324BC8AF2003DC91C /* EnglishWord.swift in Sources */,
 				31E2DE1224B2BFC400937678 /* RSSReader.swift in Sources */,
 				31F8B3AC24AD812200D339FE /* CountDown.swift in Sources */,
+				31BFEACC24BC97460066A562 /* EnglishWordView.swift in Sources */,
 				3119253B24A74AF000D06549 /* OneWordView.swift in Sources */,
 				3119254824A75E0700D06549 /* PayTools.swift in Sources */,
 				3119254724A75E0400D06549 /* OneWordWidget.swift in Sources */,
@@ -834,6 +858,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 22YH22GVF2;
 				INFOPLIST_FILE = MainWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -855,6 +880,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 22YH22GVF2;
 				INFOPLIST_FILE = MainWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
