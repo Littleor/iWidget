@@ -10,6 +10,20 @@
 <img width="180px" src="https://s1.ax1x.com/2020/07/13/UtSZvt.png" alt="UtSZvt.png" border="0" />
 </div>
 
+
+## 使用
+
+```
+git clone https://github.com/Littleor/iWidget
+cd iWidget
+open iWidget.xcodeproj
+```
+> Xcode12打开后请耐心等待项目初始化
+> 
+> 修改Sign即可真机调试,必须真机调试!虚拟机有bug.
+> 
+> 常见问题: [Missing package product 'FeedKit'](https://github.com/Littleor/iWidget/issues/1)
+
 ## 开发经历分享
 
 [WidgetKit开发实战-1](https://juejin.im/post/5ef41fd86fb9a07ea10bb8ec)
@@ -19,7 +33,6 @@
 [WidgetKit开发实战-3](https://juejin.im/post/5ef789b0f265da22fc253d2b)
 
 [WidgetKit开发实战-4](https://juejin.im/post/5f02eaef5188252e955a5bdd)
-
 
 ## 简介
 > 一款基于iOS14的WidgetKit的小部件集合软件。
