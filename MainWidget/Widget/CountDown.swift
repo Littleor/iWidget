@@ -18,7 +18,13 @@ extension Date {
         let nowTimeStamp = Int(now.timeIntervalSince1970)
         let toDateTimeStamp = Int(toDate.timeIntervalSince1970)
         let difference:Double = Double(abs(nowTimeStamp - toDateTimeStamp))
-        return Int(floor( difference / (86400))) + 1
+        if(nowTimeStamp < toDateTimeStamp){
+            return Int(floor( difference / (86400))) + 1
+        }
+        else{
+            return Int(floor( difference / (86400)))
+        }
+        
     }
     func dateToString(_ date:Date,dateFormat:String = "yyyy-MM-dd HH:mm:ss") -> String {
         let formatter = DateFormatter()
