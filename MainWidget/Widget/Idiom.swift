@@ -59,7 +59,7 @@ struct IdiomEntryView : View {
 struct IdiomWidget: Widget {
     private let kind: String = "IdiomWidget"
     public var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: IdiomProvider(), placeholder: IdiomPlaceholderView()) { entry in
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: IdiomProvider()) { entry in
             IdiomEntryView(entry: entry)
         }
         .configurationDisplayName("每日成语")

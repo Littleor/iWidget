@@ -95,7 +95,7 @@ struct CountDownPlaceholderView : View {
 struct CountDownWidget: Widget {
     private let kind: String = "CountDownWidget"
     public var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: CountDownIntent.self, provider: CountDownProvider(), placeholder: CountDownPlaceholderView()) { entry in
+        IntentConfiguration(kind: kind, intent: CountDownIntent.self, provider: CountDownProvider()) { entry in
             CountDownEntryView(entry: entry)
         }
         .configurationDisplayName("倒计时")

@@ -60,7 +60,7 @@ struct EnglishWordEntryView : View {
 struct EnglishWordWidget: Widget {
     private let kind: String = "EnglishWordWidget"
     public var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: EnglishWordIntent.self, provider: EnglishWordProvider(), placeholder: EnglishWordPlaceholderView()) { entry in
+        IntentConfiguration(kind: kind, intent: EnglishWordIntent.self, provider: EnglishWordProvider()) { entry in
             EnglishWordEntryView(entry: entry)
         }
         .configurationDisplayName("每日单词")

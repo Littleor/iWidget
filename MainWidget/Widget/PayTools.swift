@@ -38,7 +38,7 @@ struct PayToolsEntryView : View {
 struct PayToolsWidget: Widget {
     private let kind: String = "PayToolsWidget"
     public var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: PayToolsProvider(), placeholder: PayToolsMediumView()) { entry in
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: PayToolsProvider()) { entry in
             PayToolsEntryView(entry: entry)
         }
         .configurationDisplayName("支付助手")

@@ -59,7 +59,7 @@ struct OneWordEntryView : View {
 struct OneWordWidget: Widget {
     private let kind: String = "OneWordWidget"
     public var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: OneWordProvider(), placeholder: OneWordPlaceholderView()) { entry in
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: OneWordProvider()) { entry in
             OneWordEntryView(entry: entry)
         }
         .configurationDisplayName("一言")

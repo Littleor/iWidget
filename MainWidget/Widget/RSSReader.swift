@@ -77,7 +77,7 @@ struct RSSReaderEntryView : View {
 struct RSSReaderWidget: Widget {
     private let kind: String = "RSSReaderWidget"
     public var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: RSSReaderIntent.self, provider: RSSReaderProvider(), placeholder: RSSReaderPlaceholderView()) { entry in
+        IntentConfiguration(kind: kind, intent: RSSReaderIntent.self, provider: RSSReaderProvider()) { entry in
             RSSReaderEntryView(entry: entry)
         }
         .configurationDisplayName("RSS订阅")
