@@ -1,6 +1,9 @@
 #  iWidget
+
+> 基于iWidget开发的[Widget Center](https://apps.apple.com/cn/app/id1522986813)已发布至App Store!更多功能，更好的优化，欢迎下载！[直达链接](https://apps.apple.com/cn/app/id1522986813)
+
 ## 效果演示
-> 请耐心等待GIF加载，加载失败请刷新页面。
+> 请耐心等待图片加载，加载失败请刷新页面。
 
 
 <div style="display:flex;flex-direction:column;flex-wrap: nowrap;">
