@@ -52,6 +52,7 @@ struct IconWidgetItem:View {
                     Image(icon)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.white)
                 }
                 .frame(width: size, height: size, alignment: .center)
                 .zIndex(1)

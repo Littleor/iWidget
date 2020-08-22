@@ -13,15 +13,15 @@ struct CountDownView: View {
     var body: some View {
         
         VStack(alignment: .center) {
-            HStack(alignment: .lastTextBaseline, spacing: 0.0){
+            HStack(alignment: .bottom, spacing: 0.0){
                 Text("\(day)")
-//                    .baselineOffset(0.0)
-                    .font(.custom("LargeDate", size: 42, relativeTo: .largeTitle))
+                    .baselineOffset(0.0)
+//                    .font(.custom("LargeDate", size: 42, relativeTo: .largeTitle))
                     .fontWeight(.bold)
                     .tracking(1.5)
                     .lineLimit(1)
                 Text("DAY")
-//                    .baselineOffset(6.0)
+                    .baselineOffset(6.0)
                     .font(.footnote)
                     .fontWeight(.bold)
                     .foregroundColor(Color("AccentColor"))
