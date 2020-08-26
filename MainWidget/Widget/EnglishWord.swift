@@ -11,12 +11,15 @@ import Intents
 
 struct EnglishWordProvider: IntentTimelineProvider {
     let englishWordExample = EnglishWord(word: "abandon", tran: ["v. 遗弃;离开;放弃;终止;陷入","n. 放任,狂热"], ch_example: "他声称他的父母抛弃了他。", en_example: "He claimed that his parents had abandoned him.", exam: ["TOEFL","高中","SAT","IELTS","CET6","GRE","CET4","商务英语","考研"], uspronunciation: "əˈbændən", ukpronunciation: "əˈbændən", type: "CET4")
-    public func snapshot(for configuration: EnglishWordIntent, with context: Context, completion: @escaping (EnglishWordEntry) -> ()) {
+    func placeholder(in context: Context) -> EnglishWordEntry {
+        return EnglishWordEntry(date: Date(), data: [])
+    }
+    func getSnapshot(for configuration: EnglishWordIntent, in context: Context, completion: @escaping (EnglishWordEntry) -> Void) {
         let entry = EnglishWordEntry(date: Date(),data: [englishWordExample,englishWordExample,englishWordExample])
         completion(entry)
     }
     
-    public func timeline(for configuration: EnglishWordIntent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(for configuration: EnglishWordIntent, in context: Context, completion: @escaping (Timeline<EnglishWordEntry>) -> Void) {
         let currentDate = Date()
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 60, to: currentDate)!
         //逃逸闭包传入匿名函数 当调用completion时调用该匿名函数刷新Widget

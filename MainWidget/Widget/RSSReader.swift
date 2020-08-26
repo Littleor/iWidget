@@ -10,12 +10,14 @@ import SwiftUI
 import Intents
 
 struct RSSReaderProvider: IntentTimelineProvider {
-    public func snapshot(for configuration: RSSReaderIntent, with context: Context, completion: @escaping (RSSReaderEntry) -> ()) {
+    func placeholder(in context: Context) -> RSSReaderEntry {
+        return RSSReaderEntry(date: Date(),data: RSS())
+    }
+    func getSnapshot(for configuration: RSSReaderIntent, in context: Context, completion: @escaping (Entry) -> Void) {
         let entry = RSSReaderEntry(date: Date(),data: RSS())
         completion(entry)
     }
-    
-    public func timeline(for configuration: RSSReaderIntent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(for configuration: RSSReaderIntent, in context: Context, completion: @escaping (Timeline<RSSReaderEntry>) -> Void) {
         let currentDate = Date()
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 60, to: currentDate)!
         let url = configuration.url ?? "https://sixming.com/index.php/feed/"
@@ -62,10 +64,10 @@ struct RSSReaderEntryView : View {
             VStack(){
                 RSSReaderView(title: entry.data.channel?.title ?? "iWidget", itemTitle: entry.data.items?[0].title ?? "iOS14首款小部件集合软件发布-iWidget", itemDesc: entry.data.items?[0].description ?? "iOS14首款小部件集合软件发布-iWidget", itemPubDate: (entry.data.items?[0].pubDate ?? Date()).getRelateiveDate(unitsStyle: .short),url: entry.data.items?[0].link ?? "https://sixming.com")
                 if((entry.data.items ?? []).count > 1){
-                RSSReaderView(title: entry.data.channel?.title ?? "iWidget", itemTitle: entry.data.items?[1].title ?? "iOS14首款小部件集合软件发布-iWidget", itemDesc: entry.data.items?[1].description ?? "iOS14首款小部件集合软件发布-iWidget", itemPubDate: (entry.data.items?[1].pubDate ?? Date()).getRelateiveDate(unitsStyle: .short),url: entry.data.items?[1].link ?? "https://sixming.com")
+                    RSSReaderView(title: entry.data.channel?.title ?? "iWidget", itemTitle: entry.data.items?[1].title ?? "iOS14首款小部件集合软件发布-iWidget", itemDesc: entry.data.items?[1].description ?? "iOS14首款小部件集合软件发布-iWidget", itemPubDate: (entry.data.items?[1].pubDate ?? Date()).getRelateiveDate(unitsStyle: .short),url: entry.data.items?[1].link ?? "https://sixming.com")
                 }
                 if((entry.data.items ?? []).count > 2){
-                RSSReaderView(title: entry.data.channel?.title ?? "iWidget", itemTitle: entry.data.items?[2].title ?? "iOS14首款小部件集合软件发布-iWidget", itemDesc: entry.data.items?[2].description ?? "iOS14首款小部件集合软件发布-iWidget", itemPubDate: (entry.data.items?[2].pubDate ?? Date()).getRelateiveDate(unitsStyle: .short),url: entry.data.items?[2].link ?? "https://sixming.com")
+                    RSSReaderView(title: entry.data.channel?.title ?? "iWidget", itemTitle: entry.data.items?[2].title ?? "iOS14首款小部件集合软件发布-iWidget", itemDesc: entry.data.items?[2].description ?? "iOS14首款小部件集合软件发布-iWidget", itemPubDate: (entry.data.items?[2].pubDate ?? Date()).getRelateiveDate(unitsStyle: .short),url: entry.data.items?[2].link ?? "https://sixming.com")
                 }
             }
         default:
@@ -77,7 +79,7 @@ struct RSSReaderEntryView : View {
 struct RSSReaderWidget: Widget {
     private let kind: String = "RSSReaderWidget"
     public var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: RSSReaderIntent.self, provider: RSSReaderProvider()) { entry in
+        IntentConfiguration(kind: kind, intent: RSSReaderIntent.self, provider: RSSReaderProvider()){entry in
             RSSReaderEntryView(entry: entry)
         }
         .configurationDisplayName("RSS订阅")

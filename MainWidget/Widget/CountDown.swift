@@ -41,19 +41,20 @@ extension Date {
 }
 
 struct CountDownProvider: IntentTimelineProvider {
+    func placeholder(in context: Context) -> CountDownEntry {
+        CountDownEntry(date: Date(), data: CountDown(date: Date(), title:"爱上部件中心"))
+    }
     //    typealias Entry = CountDownEntry
-    public func snapshot(for configuration: CountDownIntent, with context: Context, completion: @escaping (CountDownEntry) -> ()) {
-        let entry = CountDownEntry(date: Date(),data: CountDown(date: Date(),title: "爱上iWidget"))
+    func getSnapshot(for configuration: CountDownIntent, in context: Context, completion: @escaping (CountDownEntry) -> Void) {
+        let entry = CountDownEntry(date: Date(),data: CountDown(date: Date(),title: "爱上部件中心"))
         completion(entry)
     }
-    
-    public func timeline(for configuration: CountDownIntent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(for configuration: CountDownIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
         let currentDate = Date()
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 30, to: currentDate)!
         //Widget输入的日期默认为中午12点
         let configureDate = (configuration.date?.date  ?? Date()) - 12 * 3600
         let entry = CountDownEntry(date: currentDate,data: CountDown(day: Date().daysBetweenDate(toDate: configureDate),date: configureDate,title: configuration.title ?? "请配置标题" ))
-        print(configureDate)
         let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
         completion(timeline)
     }
@@ -94,6 +95,7 @@ struct CountDownPlaceholderView : View {
 
 struct CountDownWidget: Widget {
     private let kind: String = "CountDownWidget"
+    
     public var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: CountDownIntent.self, provider: CountDownProvider()) { entry in
             CountDownEntryView(entry: entry)

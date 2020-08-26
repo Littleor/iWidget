@@ -10,13 +10,16 @@ import SwiftUI
 import Intents
 
 struct PayToolsProvider: IntentTimelineProvider {
-    typealias Entry = SimpleEntry
-    public func snapshot(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (SimpleEntry) -> ()) {
+
+    
+    func placeholder(in context: Context) -> SimpleEntry {
+        return SimpleEntry(date: Date())
+    }
+    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> Void) {
         let entry = SimpleEntry(date: Date())
         completion(entry)
     }
-    
-    public func timeline(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
         let currentDate = Date()
         let entry = SimpleEntry(date: currentDate)
         let timeline = Timeline(entries: [entry], policy: .never)
@@ -38,8 +41,8 @@ struct PayToolsEntryView : View {
 struct PayToolsWidget: Widget {
     private let kind: String = "PayToolsWidget"
     public var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: PayToolsProvider()) { entry in
-            PayToolsEntryView(entry: entry)
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: PayToolsProvider()){ entry in
+                PayToolsEntryView(entry: entry)
         }
         .configurationDisplayName("支付助手")
         .description("快捷启动扫一扫和支付码")

@@ -10,12 +10,14 @@ import SwiftUI
 import Intents
 
 struct OneWordProvider: IntentTimelineProvider {
-    public func snapshot(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (OneWordEntry) -> ()) {
+    func placeholder(in context: Context) -> OneWordEntry {
+        return  OneWordEntry(date: Date(),data: OneWord(content: "人类的悲欢并不相通，我只觉得他们吵闹", length: 18))
+    }
+    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (OneWordEntry) -> Void) {
         let entry = OneWordEntry(date: Date(),data: OneWord(content: "人类的悲欢并不相通，我只觉得他们吵闹", length: 18))
         completion(entry)
     }
-    
-    public func timeline(for configuration: ConfigurationIntent, with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
         let currentDate = Date()
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 60, to: currentDate)!
         //逃逸闭包传入匿名函数 当调用completion时调用该匿名函数刷新Widget
