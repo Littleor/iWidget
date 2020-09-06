@@ -2,6 +2,8 @@
 
 > 基于iWidget开发的[Widget Center](https://apps.apple.com/cn/app/id1522986813)已发布至App Store!更多功能，更好的优化，欢迎下载！[直达链接](https://apps.apple.com/cn/app/id1522986813)
 
+> iWidget的TestFlight版本已经通过:[iWidget TF版本链接](https://testflight.apple.com/join/fQTPHyyx),请使用最新版iOS14及其以上的版本测试效果!
+
 ## 效果演示
 > 请耐心等待图片加载，加载失败请刷新页面。
 
