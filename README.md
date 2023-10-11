@@ -57,6 +57,11 @@ open iWidget.xcodeproj
 
 [GPL-3.0](LICENSE) © Littleor
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Littleor/iWidget&type=Date)](https://star-history.com/#Littleor/iWidget&Date)
+
+
 
 ## 鸣谢 
 本项目很大部分参考了[Bruno Rocha](https://github.com/rockbruno)的[How to create Widgets in iOS 14 in Swift](https://swiftrocks.com/ios-14-widget-tutorial-mini-apps)这篇文章，同时非常感谢其还在百忙之中回复了我的邮件给予了指导,感谢🙏。
